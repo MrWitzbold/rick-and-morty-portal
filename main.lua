@@ -272,6 +272,24 @@ function open_portal()
 	
 	local function teleport_to_player()
 		game.Players.LocalPlayer.Character:moveTo(player_to_teleport_to.Character.Head.Position)
+		local portal2 = Instance.new("Part")
+		portal2.Name = "portal2"
+		portal2.Transparency = 1
+		portal2.Size = Vector3.new(6, 8, 0.001)
+		portal2.Orientation = Vector3.new(0, -90, 0)
+		portal2.Parent = workspace
+		portal2.Anchored = true
+		portal2.CanCollide = false
+		local decal12 = Instance.new("Decal")
+		decal12.Face = Enum.NormalId.Front
+		decal12.Texture = "rbxassetid://7493310007"
+		decal12.Parent = portal2
+		local decal22 = Instance.new("Decal")
+		decal22.Face = Enum.NormalId.Back
+		decal22.Texture = "rbxassetid://7493310007"
+		decal22.Parent = portal2
+		local player_head_position = game.Players.LocalPlayer.Character.Head.Position
+		portal2.Position = player_to_teleport_to.Character.Head.Position
 	end
 	portal_sound:Play()
 	local portal = Instance.new("Part")
