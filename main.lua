@@ -337,6 +337,7 @@ while true do
 		while game.Players.LocalPlayer.Character.Humanoid.Health == 0 do
 			wait(0.1)
 		end
+		wait(2)
 		make_portal_gun_and_GUI()
 	end
 end
